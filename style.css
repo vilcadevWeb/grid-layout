@@ -1,0 +1,80 @@
+body{
+  font-family: 'Courier New', Courier, monospace;
+  padding: 0;
+  margin: 0;
+}
+
+.container {  
+  display: grid;
+  background-color: black;
+  grid-template-columns: 1fr 1fr 1fr 1.1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-template-rows: 1.3fr 1.3fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr 1fr;
+  grid-auto-columns: 1fr;
+  gap: 10px;
+  padding: 10px;
+  grid-auto-flow: row;
+  height: 100vh;
+  grid-template-areas:
+    "main-img main-img main-img main-img img-2 img-2 img-2 img-3 img-3 img-3"
+    "main-img main-img main-img main-img img-2 img-2 img-2 img-3 img-3 img-3"
+    "main-img main-img main-img main-img img-2 img-2 img-2 img-3 img-3 img-3"
+    "main-img main-img main-img main-img img-4 img-4 img-4 img-4 img-4 img-4"
+    "main-img main-img main-img main-img img-4 img-4 img-4 img-4 img-4 img-4"
+    "img-7 img-7 img-7 img-7 img-4 img-4 img-4 img-4 img-4 img-4"
+    "img-7 img-7 img-7 img-7 img-4 img-4 img-4 img-4 img-4 img-4"
+    "img-6 img-6 img-6 img-6 img-6 img-6 img-6 img-5 img-5 img-5"
+    "img-6 img-6 img-6 img-6 img-6 img-6 img-6 img-5 img-5 img-5"
+    "img-6 img-6 img-6 img-6 img-6 img-6 img-6 img-5 img-5 img-5";
+}
+
+#grid-layout .box{
+  background-color: #ccc;
+  border-radius: 5px;
+  background-size: cover;
+  background-position: center center;
+}
+
+#grid-layout .box:hover:not(.main-img){
+  transform: scale(0.99);
+  opacity: 1;
+}
+
+#grid-layout .box:not(.main-img){
+  opacity:0.5;
+  transition: all 0.1s ease-in;
+}
+
+.main-img {
+   grid-area: main-img;
+   background-image: url("La ruta de tu imagen");
+   }
+
+.img-2 {
+   grid-area: img-2; 
+   background-image: url("La ruta de tu imagen");
+  }
+
+.img-3 {
+   grid-area: img-3;
+   background-image: url("La ruta de tu imagen");
+   }
+
+.img-4 {
+   grid-area: img-4;
+   background-image: url("La ruta de tu imagen");
+   }
+
+.img-5 {
+   grid-area: img-5; 
+   background-image: url("La ruta de tu imagen");
+  }
+
+.img-6 { 
+  grid-area: img-6; 
+  background-image: url("La ruta de tu imagen");
+}
+
+.img-7 { 
+  grid-area: img-7; 
+  background-image: url("La ruta de tu imagen");
+}
